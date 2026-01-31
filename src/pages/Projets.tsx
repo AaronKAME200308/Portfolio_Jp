@@ -19,14 +19,14 @@ const projects = {
     {
       title: "Conception Flyers",
       category: "Branding",
-      image: "/public/face.jpeg",
+      image: "/face.jpeg",
       description: "",
       tags: ["Visuals" ,"Social media"],
     },
     {
       title: "Affiche Concert",
       category: "Menu Design",
-      image: "/projects/saveurs.jpg",
+      image: "/face1.jpeg",
       description: "",
       tags: ["Menu", "Print" ,"Social media"],
     },

@@ -49,20 +49,20 @@ interface CarouselProps {
 
 // 🔹 Toutes les images
 const ALL_ITEMS: GridItem[] = [
-  { id: '1', color: '#8B6F47', size: 'small', colSpan: 1, rowSpan: 4, image: '/public/bt1.jpeg', filter: 'Branding' },
-  { id: '2', color: '#6BA547', size: 'small', colSpan: 1, rowSpan: 2, image: '/public/bt2.jpeg', filter: 'Branding' },
-  { id: '3', color: '#5A5A5A', size: 'small', colSpan: 1, rowSpan: 4, image: '/public/bt4.jpeg', filter: 'Branding' },
-  { id: '4', color: '#D4E5D4', size: 'small', colSpan: 1, rowSpan: 2, image: '/public/bt3.jpeg', filter: 'Branding' },
-  { id: '5', color: '#C9A876', size: 'medium', colSpan: 1, rowSpan: 2, image: '/public/bt5.jpeg', filter: 'Branding' },
-  { id: '6', color: '#D3C5A5', size: 'medium', colSpan: 1, rowSpan: 2, image: '/public/bt6.jpeg', filter: 'Branding' },
+  { id: '1', color: '#8B6F47', size: 'small', colSpan: 1, rowSpan: 4, image: '/bt1.jpeg', filter: 'Branding' },
+  { id: '2', color: '#6BA547', size: 'small', colSpan: 1, rowSpan: 2, image: '/bt2.jpeg', filter: 'Branding' },
+  { id: '3', color: '#5A5A5A', size: 'small', colSpan: 1, rowSpan: 4, image: '/bt4.jpeg', filter: 'Branding' },
+  { id: '4', color: '#D4E5D4', size: 'small', colSpan: 1, rowSpan: 2, image: '/bt3.jpeg', filter: 'Branding' },
+  { id: '5', color: '#C9A876', size: 'medium', colSpan: 1, rowSpan: 2, image: '/bt5.jpeg', filter: 'Branding' },
+  { id: '6', color: '#D3C5A5', size: 'medium', colSpan: 1, rowSpan: 2, image: '/bt6.jpeg', filter: 'Branding' },
 
-  { id: '7', color: '#FFFFFF', size: 'small', colSpan: 1, rowSpan: 4, image: '/public/bt7.jpeg', filter: 'Branding' },
-  { id: '8', color: '#2A2A2A', size: 'small', colSpan: 1, rowSpan: 4, image: '/public/bt8.jpeg', filter: 'Branding' },
-  { id: '9', color: '#B8956A', size: 'large', colSpan: 1, rowSpan: 2, image: '/public/bt9.jpeg', filter: 'Branding' },
-  { id: '11', color: '#B8956A', size: 'large', colSpan: 1, rowSpan: 2, image: '/public/bt11.jpeg', filter: 'Branding' },
-  { id: '12', color: '#B8956A', size: 'large', colSpan: 1, rowSpan: 2, image: '/public/bt12.jpeg', filter: 'Branding' },
+  { id: '7', color: '#FFFFFF', size: 'small', colSpan: 1, rowSpan: 4, image: '/bt7.jpeg', filter: 'Branding' },
+  { id: '8', color: '#2A2A2A', size: 'small', colSpan: 1, rowSpan: 4, image: '/bt8.jpeg', filter: 'Branding' },
+  { id: '9', color: '#B8956A', size: 'large', colSpan: 1, rowSpan: 2, image: '/bt9.jpeg', filter: 'Branding' },
+  { id: '11', color: '#B8956A', size: 'large', colSpan: 1, rowSpan: 2, image: '/bt11.jpeg', filter: 'Branding' },
+  { id: '12', color: '#B8956A', size: 'large', colSpan: 1, rowSpan: 2, image: '/bt12.jpeg', filter: 'Branding' },
 
-  { id: '10', color: '#F5E6D3', size: 'medium', colSpan: 1, rowSpan: 2, image: '/public/bt10.jpeg', filter: 'Branding' },
+  { id: '10', color: '#F5E6D3', size: 'medium', colSpan: 1, rowSpan: 2, image: '/bt10.jpeg', filter: 'Branding' },
 ]
 
 // 🔹 Découpe en slides de 6 max
