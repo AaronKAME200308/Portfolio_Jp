@@ -81,7 +81,7 @@ const Navbar = () => {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white bg-gradient-to-r from-purple-600 to-blue-500 p-2 rounded-md"
+          className="md:hidden text-white bg-gradient-to-r from-[#f2cc6a] to-white/80 p-2 rounded-md"
         >
           <span className="text-2xl">{open ? "✕" : "☰"}</span>
         </button>

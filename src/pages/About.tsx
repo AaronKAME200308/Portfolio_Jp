@@ -2,21 +2,13 @@ import { motion } from "framer-motion";
 import CircularProgress from "../component/CircleProgress";
 import { Sparkle } from "lucide-react";
 
-// SVG en composants React
-import PowerPointIcon from "../../public/brand-microsoft-powerpoint-svgrepo-com.svg?react";
-import CanvaIcon from "../../public/canva-svgrepo-com.svg?react";
-import CapcutIcon from "../../public/capcut-svgrepo-com.svg?react";
-import IllustratorIcon from "../../public/illustrator-svgrepo-com.svg?react";
-import IndesignIcon from "../../public/indesign-svgrepo-com.svg?react";
-import PhotoshopIcon from "../../public/photoshop-svgrepo-com.svg?react";
-
 const logos = [
-  { Icon: PowerPointIcon, percent: 70 },
-  { Icon: CanvaIcon, percent: 90 },
-  { Icon: CapcutIcon, percent: 85 },
-  { Icon: IllustratorIcon, percent: 80 },
-  { Icon: IndesignIcon, percent: 75 },
-  { Icon: PhotoshopIcon, percent: 88 },
+  { Icon: "/brand-microsoft-powerpoint-svgrepo-com.svg", percent: 70, name: "PowerPoint"},
+  { Icon: "/canva-svgrepo-com.svg", percent: 90, name: "Canva"},
+  { Icon: "/capcut-svgrepo-com.svg", percent: 85, name: "Capcut"},
+  { Icon: "/illustrator-svgrepo-com.svg", percent: 80, name:"Illustrator" },
+  { Icon: "/indesign-svgrepo-com.svg", percent: 75, name: "Indesign"},
+  { Icon: "/photoshop-svgrepo-com.svg", percent: 88, name:"Photoshop" },
 ];
 
 const About = () => {
@@ -36,7 +28,7 @@ const About = () => {
 
       {/* LOGOS + PROGRESS */}
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 place-items-center">
-        {logos.map(({ Icon, percent }, index) => (
+        {logos.map(({ Icon, percent,name }, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -45,8 +37,12 @@ const About = () => {
             className="flex flex-col items-center gap-4"
           >
             {/* SVG INLINE */}
-            <Icon
+            <div
               className="
+              flex
+              flex-col
+              items-center
+              mb-5
                 w-16 h-16
                 text-white/70
                 hover:text-[#f2cc6a]
@@ -54,7 +50,10 @@ const About = () => {
                 hover:scale-110
                 hover:drop-shadow-[0_0_12px_rgba(242,204,106,0.8)]
               "
-            />
+            >
+              <img src={Icon} alt=""  />
+              <span className="text-xl">{name}</span>
+            </div>
 
             {/* CERCLE */}
             <CircularProgress percentage={percent} size={90} />

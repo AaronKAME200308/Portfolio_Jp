@@ -48,8 +48,8 @@ const Home = () => {
             initial={{
               boxShadow: "0 25px 60px rgba(242, 204, 106, 0.8)",
             }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6 }}
+            animate={{ scale: 1,  boxShadow: "0 50px 120px rgba(242, 204, 106, 0.8)" }}
+            transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 0.6, ease: "easeInOut" }}
             className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden flex items-center justify-center mb-8"
           >
             <img

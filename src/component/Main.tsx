@@ -11,7 +11,6 @@ const Main = () => {
             </section>
 
 
-
             <section id="À propos">
                 <About/>
             </section>
