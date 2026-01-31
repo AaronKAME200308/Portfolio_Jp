@@ -1,29 +1,71 @@
-interface Props {
-    title: string;
-    category: string;
-    image: string;
-    description: string;
-    tags: string[];
+export interface ProjectProps {
+  title: string;
+  category: string;
+  image: string;
+  description: string;
+  tags: string[];
+}
+export interface ProjectCardProps extends ProjectProps {
+  onSelect: (value: string) => void;
 }
 
-const HexagonCard = ({ image, title, description, tags }: Props) => {
+
+const HexagonCard = ({ image, title,category, description, tags,onSelect }: ProjectCardProps) => {
   return (
-    <div className="hex">
+    <div className="hex group">
       <div
         className="hex-inner"
         style={{ backgroundImage: `url(${image})` }}
       >
-        <div className="hex-overlay">
-          <h6 className="text-lg font-semibold">{title}</h6>
-          <p className="text-xs opacity-80">{description}</p>
+        <div className="hex-overlay flex flex-col items-center justify-center text-center h-full w-full transition-all duration-300">
 
-          <div className="flex flex-wrap gap-2 mt-2 text-xs">
+          {/* TITRE */}
+          <h3 className="text-lg font-semibold transition-colors duration-300 ">
+            {title}
+          </h3>
+
+          {/* DESCRIPTION */}
+          <p className="text-sm opacity-80 transition-colors duration-300 /90">
+            {description}
+          </p>
+
+          {/* TAGS */}
+          <div className="flex flex-wrap justify-center gap-2  text-xs">
             {tags.map((t, i) => (
-              <span key={i} className="px-2 py-0.5 bg-white/20 rounded-full">
+              <span
+                key={i}
+                className="
+                  px-2 py-0.5 rounded-full
+                  bg-white/20 text-white
+                  transition-all duration-300
+                  group-hover:bg-gradient-to-r from-[#f2cc6a] to-[#f2a500]                  
+                "
+              >
                 {t}
               </span>
             ))}
           </div>
+
+          {/* BOUTON ROND */}
+          <button
+          onClick={() => onSelect(category)} 
+            className="
+              mt-4
+              w-10 h-10
+              text-white
+              rounded-full
+              flex items-center justify-center
+              bg-gradient-to-r from-[#f2cc6a] to-[#f2a500] text-black
+              opacity-0 scale-75
+              transition-all duration-300
+              group-hover:opacity-100
+              group-hover:scale-100
+              hover:scale-110
+            "
+          >
+            →
+          </button>
+
         </div>
       </div>
     </div>

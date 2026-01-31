@@ -146,7 +146,7 @@ export default function Carousel({ active }: CarouselProps) {
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       dragElastic={0.3}
-      onDragEnd={(event, info) => {
+      onDragEnd={(_event, info) => {
         if (info.offset.x < -50) {
           // glissé vers la gauche → slide suivant
           setCurrentSlide((currentSlide + 1) % CAROUSEL_SLIDES.length)

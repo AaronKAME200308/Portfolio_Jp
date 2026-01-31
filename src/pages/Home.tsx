@@ -46,18 +46,30 @@ const Home = () => {
           {/* IMAGE */}
           <motion.div
             initial={{
-              boxShadow: "0 25px 60px rgba(242, 204, 106, 0.8)",
+              boxShadow: "inset 0 0 30px rgba(242, 204, 106, 0.35)",
             }}
-            animate={{ scale: 1,  boxShadow: "0 50px 120px rgba(242, 204, 106, 0.8)" }}
-            transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 0.6, ease: "easeInOut" }}
-            className="w-55 h-55 md:w-60 md:h-60 rounded-full overflow-hidden flex items-center justify-center mb-8"
+            animate={{
+              scale: 1,
+              boxShadow: "inset 0 0 70px rgba(242, 204, 106, 0.65)",
+            }}
+            transition={{
+              duration: 0.6,
+              repeat: Infinity,
+              repeatDelay: 0.6,
+              ease: "easeInOut",
+            }}
+            className="w-55 h-55 flex items-center justify-center mb-8 rounded-full"
           >
-            <img
-              src="/jppp.png"
+            <motion.img
+             initial={{
+              boxShadow: "0 0 30px rgba(242, 204, 106, 0.35)",
+            }}
+              src="/jp_true.png"
               alt="Portrait"
-              className="w-full h-full object-contain"
+              className="w-55 h-55 object-contain bg-transparent rounded-full"
             />
           </motion.div>
+
 
           {/* BOUTONS */}
           <div className="flex justify-center gap-4 flex-wrap">

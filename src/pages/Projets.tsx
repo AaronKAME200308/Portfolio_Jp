@@ -1,5 +1,6 @@
 import { useState } from "react";
 import HexagonCard from "../component/ProjectCard";
+import type { ProjectProps } from "../component/ProjectCard";
 import { motion } from "framer-motion";
 import Carousel from "../component/Carroussel"
 import { PanelsTopLeft } from "lucide-react";
@@ -18,16 +19,16 @@ const projects = {
     {
       title: "Conception Flyers",
       category: "Branding",
-      image: "/projects/maeva.jpg",
+      image: "/public/face.jpeg",
       description: "",
-      tags: ["Logo", "Visuals"],
+      tags: ["Visuals" ,"Social media"],
     },
     {
       title: "Affiche Concert",
       category: "Menu Design",
       image: "/projects/saveurs.jpg",
       description: "",
-      tags: ["Menu", "Print"],
+      tags: ["Menu", "Print" ,"Social media"],
     },
     {
       title: "Identité Visuelle",
@@ -85,10 +86,11 @@ const projects = {
 
 const Projects = () => {
   const [active, setActive] = useState("All");
+  
 
-  const filterProjects = (list) => {
+  const filterProjects = (list:ProjectProps[] ): ProjectProps[] => {
     if (active === "All") return list;
-    return list.filter((p) => p.category === active);
+    return list.filter((p: { category: string; }) => p.category === active);
   };
   return (
     <main className="max-w-7xl mx-auto px-6 py-20">
@@ -135,15 +137,15 @@ const Projects = () => {
             className="flex flex-wrap justify-center gap-x-3"
           >
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-6">
-              {filterProjects(projects.first).map((project, i) => (
-                <HexagonCard key={`first-${i}`} {...project} />
+              {filterProjects(projects.first).map((project , i: number) => (
+                <HexagonCard key={`first-${i}`} {...project} onSelect={(value) => setActive(value)}/>
               ))}
             </div>
 
             {/* ROW 2 */}
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-6 mt-[-40px]">
-              {filterProjects(projects.second).map((project, i) => (
-                <HexagonCard key={`second-${i}`} {...project} />
+              {filterProjects(projects.second).map((project, i:number) => (
+                <HexagonCard key={`second-${i}`} {...project} onSelect={(value) => setActive(value)}/>
               ))}
             </div>
           </motion.div>)}
