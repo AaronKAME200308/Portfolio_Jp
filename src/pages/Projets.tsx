@@ -2,6 +2,7 @@ import { useState } from "react";
 import HexagonCard from "../component/ProjectCard";
 import { motion } from "framer-motion";
 import Carousel from "../component/Carroussel"
+import { PanelsTopLeft } from "lucide-react";
 
 const filters = [
   "All",
@@ -15,67 +16,67 @@ const filters = [
 const projects = {
   first: [
     {
-      title: "Maeva Perfume",
+      title: "Conception Flyers",
       category: "Branding",
       image: "/projects/maeva.jpg",
-      description: "Complete visual identity for an authentic perfume boutique.",
-      tags: ["Logo", "Visuals", "Social media"],
+      description: "",
+      tags: ["Logo", "Visuals"],
     },
     {
-      title: "Saveurs du Cameroun",
+      title: "Affiche Concert",
       category: "Menu Design",
       image: "/projects/saveurs.jpg",
-      description: "Menu revitalization and communication strategy for an authentic restaurant.",
-      tags: ["Menu", "Print", "Communication"],
+      description: "",
+      tags: ["Menu", "Print"],
     },
     {
-      title: "Bijouterie 237",
+      title: "Identité Visuelle",
       category: "Branding",
       image: "/projects/bijouterie.jpg",
-      description: "Identity creation for a Cameroonian artisanal jewelry store.",
+      description: "",
       tags: ["Logo", "Product visuals", "E-commerce"],
     },
     {
-      title: "Maeva Perfume",
+      title: "Miniature",
       category: "Branding",
       image: "/projects/maeva.jpg",
-      description: "Complete visual identity for an authentic perfume boutique.",
+      description: "",
       tags: ["Logo", "Visuals", "Social media"],
     },
     {
-      title: "Maeva Perfume",
+      title: "Retouche Photo",
       category: "Branding",
       image: "/projects/maeva.jpg",
-      description: "Complete visual identity for an authentic perfume boutique.",
+      description: "",
       tags: ["Logo", "Visuals", "Social media"],
     },
   ],
   second: [
     {
-      title: "Bijouterie 237",
+      title: "Packaging",
       category: "Branding",
       image: "/projects/bijouterie.jpg",
-      description: "Identity creation for a Cameroonian artisanal jewelry store.",
+      description: "",
       tags: ["Logo", "Product visuals", "E-commerce"],
     },
     {
-      title: "Bijouterie 237",
+      title: "Campagne Aadémique",
       category: "Branding",
       image: "/projects/bijouterie.jpg",
-      description: "Identity creation for a Cameroonian artisanal jewelry store.",
+      description: "",
       tags: ["Logo", "Product visuals", "E-commerce"],
     },
     {
-      title: "Bijouterie 237",
+      title: "Dépliant Professionnel",
       category: "Branding",
       image: "/projects/bijouterie.jpg",
-      description: "Identity creation for a Cameroonian artisanal jewelry store.",
+      description: "",
       tags: ["Logo", "Product visuals", "E-commerce"],
     }, {
-      title: "Bijouterie 237",
+      title: "Présentation",
       category: "Branding",
       image: "/projects/bijouterie.jpg",
-      description: "Identity creation for a Cameroonian artisanal jewelry store.",
+      description: "",
       tags: ["Logo", "Product visuals", "E-commerce"],
     },
   ],
@@ -95,9 +96,10 @@ const Projects = () => {
       <motion.div
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="mx-auto mb-12 w-fit px-3 py-2 border border-[#f2cc6a]/60 rounded-full text-2xl font-bold text-center"
+        className="mx-auto mb-12 w-fit px-3 py-2 border border-[#f2cc6a]/60 rounded-full text-2xl font-bold text-center bg-gradient-to-r from-black via-black/80 to-black/60"
       >
         <div className="flex items-center gap-2">
+          <PanelsTopLeft className="w-5 h-5 text-[#f2cc6a]/90"/>
           <span>Projets</span>
         </div>
       </motion.div>
@@ -155,7 +157,7 @@ const Projects = () => {
             transition={{ duration: 0.45, ease: "easeOut" }}
             className="w-full"
           >
-            <Carousel />
+            <Carousel active={active} />
           </motion.div>)}
       </div>
     </main>

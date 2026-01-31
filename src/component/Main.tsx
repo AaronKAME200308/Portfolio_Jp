@@ -1,6 +1,8 @@
 import About from "../pages/About";
+import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import Projects from "../pages/Projets";
+import BackToTop from "./BackToTop";
 
 
 const Main = () => {
@@ -10,18 +12,18 @@ const Main = () => {
                 <Home />
             </section>
 
-
             <section id="À propos">
-                <About/>
+                <About />
             </section>
 
             <section id="Projets">
-               <Projects/>
+                <Projects />
             </section>
-            
+
             <section id="Contact">
-                
+                <Contact />
             </section>
+            <BackToTop/>
         </main>
     );
 };

@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <header className="backdrop-blur-md sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-2">
 
         {/* LOGO */}
         <motion.p

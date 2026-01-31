@@ -50,12 +50,12 @@ const Home = () => {
             }}
             animate={{ scale: 1,  boxShadow: "0 50px 120px rgba(242, 204, 106, 0.8)" }}
             transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 0.6, ease: "easeInOut" }}
-            className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden flex items-center justify-center mb-8"
+            className="w-55 h-55 md:w-60 md:h-60 rounded-full overflow-hidden flex items-center justify-center mb-8"
           >
             <img
-              src="/aaron.JPG"
+              src="/jppp.png"
               alt="Portrait"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </motion.div>
 

@@ -18,10 +18,10 @@ const About = () => {
       <motion.div
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="mx-auto mb-12 w-fit px-3 py-2 border border-[#f2cc6a]/60 rounded-full text-2xl font-bold text-center"
+        className="mx-auto mb-12 w-fit px-3 py-2 border border-[#f2cc6a]/60 rounded-full text-2xl font-bold text-center bg-gradient-to-r from-black via-black/80 to-black/60"
       >
         <div className="flex items-center gap-2">
-          <Sparkle className="w-5 h-5 text-[#f2cc6a]/60" />
+          <Sparkle className="w-5 h-5 text-[#f2cc6a]/90" />
           <span>Compétences</span>
         </div>
       </motion.div>

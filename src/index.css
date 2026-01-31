@@ -87,12 +87,6 @@ section {
   opacity: 1;             /* Logo central plus visible */
 }
 
-/* Flèches */
-.slick-prev, .slick-next {
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-}
 
 .slick-prev:before, .slick-next:before {
   font-size: 40px;
@@ -168,6 +162,7 @@ section {
   max-width: 70%;
   object-fit: contain;
 }
+
 
 /* Mobile : encore plus d’espace */
 @media (max-width: 768px) {

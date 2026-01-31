@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 interface Props {
     title: string;
     category: string;
@@ -16,8 +14,8 @@ const HexagonCard = ({ image, title, description, tags }: Props) => {
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="hex-overlay">
-          <h3 className="text-lg font-semibold">{title}</h3>
-          <p className="text-sm opacity-80">{description}</p>
+          <h6 className="text-lg font-semibold">{title}</h6>
+          <p className="text-xs opacity-80">{description}</p>
 
           <div className="flex flex-wrap gap-2 mt-2 text-xs">
             {tags.map((t, i) => (
