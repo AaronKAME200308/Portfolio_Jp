@@ -27,48 +27,53 @@ const Home = () => {
         >
           {/* TITRE */}
           <h2
-            style={{ fontFamily: "SwirlyCanalope" }}
-            className="text-5xl font-extrabold leading-tight mb-4"
+
+            className="text-5xl leading-tight mb-4"
           >
-            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[#f2cc6a] to-white/90">
-              Bienvenue
+            <span className="block font-coco font-extralight bg-clip-text text-transparent bg-linear-to-r from-[#f2cc6a] to-white/90">
+              Bienvenue Chez
             </span>
-            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[#f2cc6a] to-white/90">
-              Chez JP
+            <span 
+            style={{
+              transform: 'skewY(-2deg)',
+            }} 
+            className="block p-1 bg-linear-to-r from-[#f2cc6a] to-white/90"
+            >
+              <p className="font-coco font-extrabold text-black/90"> JP GRAPHIC DESIGNER</p>
             </span>
           </h2>
 
           {/* TEXTE */}
-          <p className="text-lg text-white/85 mb-8">
-            Créateur d'identité visuel
+          <p className="font-coco font-extralight italic mt-5 text-lg text-white/85 mb-8">
+            Créateur d'identité visuel - Designer
           </p>
 
           {/* IMAGE */}
-          <motion.div
-            initial={{
-              boxShadow: "inset 0 0 30px rgba(242, 204, 106, 0.35)",
-            }}
-            animate={{
-              scale: 1,
-              boxShadow: "inset 0 0 70px rgba(242, 204, 106, 0.65)",
-            }}
-            transition={{
-              duration: 0.6,
-              repeat: Infinity,
-              repeatDelay: 0.6,
-              ease: "easeInOut",
-            }}
-            className="w-55 h-55 flex items-center justify-center mb-8 rounded-full"
-          >
-            <motion.img
-             initial={{
-              boxShadow: "0 0 30px rgba(242, 204, 106, 0.35)",
-            }}
-              src="/jp_true.png"
-              alt="Portrait"
-              className="w-55 h-55 object-contain bg-transparent rounded-full"
+          <div className="relative mb-8 w-100 h-100 flex items-center justify-center">
+            {/* Glow effect derrière l'image */}
+            <motion.div
+              initial={{
+                boxShadow: "0 0 30px rgba(242, 204, 106, 0.35)",
+              }}
+              animate={{
+                boxShadow: "0 0 70px rgba(236, 255, 29, 0.6)",
+              }}
+              transition={{
+                duration: 0.6,
+                repeat: Infinity,
+                repeatDelay: 0.6,
+                ease: "easeInOut",
+              }}
+              className="absolute inset-0 rounded-full pointer-events-none blur-2xl"
             />
-          </motion.div>
+
+            {/* Image */}
+            <motion.img
+              src="/jp-full.png"
+              alt="Portrait"
+              className="relative w-100 h-100 object-contain rounded-full"
+            />
+          </div>
 
 
           {/* BOUTONS */}
@@ -76,7 +81,7 @@ const Home = () => {
             <button onClick={() => scrollToSection("Projets")}>
               <motion.div
                 whileHover={buttonHover}
-                className="px-6 py-3 rounded-full bg-gradient-to-r from-[#f2cc6a] to-white/90 font-semibold text-white shadow-lg"
+                className="px-6 py-3 rounded-full bg-linear-to-r from-[#f2cc6a] to-white/90 font-semibold text-white shadow-lg"
               >
                 Voir mes projets
               </motion.div>

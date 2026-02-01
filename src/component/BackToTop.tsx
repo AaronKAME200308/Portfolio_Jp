@@ -22,15 +22,15 @@ export default function BackToTop() {
   if (!show) return null
 
   return (
-    <motion.button
+    <motion.span
       onClick={scrollToTop}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       whileHover={{ scale: 1.1 }}
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center text-2xl w-12 h-12 rounded-full bg-gradient-to-br from-[#f2cc6a] to-[#f2a500] shadow-lg text-white cursor-pointer"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center text-2xl w-12 h-12 rounded-full bg-linear-to-br from-[#f2cc6a] to-[#f2a500] shadow-lg text-white cursor-pointer"
     >
       <ArrowUp size={24} strokeWidth={3}  />
-    </motion.button>
+    </motion.span>
   )
 }

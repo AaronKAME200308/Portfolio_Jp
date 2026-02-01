@@ -1,13 +1,32 @@
 @import "tailwindcss";
+
+/* Regular */
 @font-face {
-  font-family: 'SwirlyCanalope';
-  src: url('/fonts/SwirlyCanalope.otf') format('truetype');
-  font-weight: 20;
-  font-style: normal;
+  font-family: 'CocoSharp';
+  src: url('./assets/font/Coco-Sharp-Extralight-trial.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CocoSharp';
+  src: url('./assets/font/Coco-Sharp-Extralight-Italic-trial.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CocoSharp';
+  src: url('./assets/font/Coco-Sharp-Extrabold-trial.ttf') format('truetype');
+  font-weight: 800;
+  font-style: bold;
+  font-display: swap;
+}
+
+@theme inline {
+  --font-coco: 'CocoSharp', sans-serif;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg,#000000,#f2cc6a);
   color: white;
   overflow-x: hidden;
