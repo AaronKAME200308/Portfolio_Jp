@@ -53,7 +53,7 @@ const TITLES = [
   { title: "Identité visuel", itemsPerSlide: 4 },
   { title: "Retouche Photo", itemsPerSlide: 2 },
   { title: "Miniature", itemsPerSlide: 4 },
-  { title: "Campagne Aadémique", itemsPerSlide: 5 }
+  { title: "Campagne Aadémique", itemsPerSlide: 5 },
   { title: "Dépliant Professionnel", itemsPerSlide: 5 }
 ]
 
