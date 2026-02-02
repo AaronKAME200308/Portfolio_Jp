@@ -1,4 +1,4 @@
-import {FaWhatsapp, FaInstagram } from "react-icons/fa"
+import {FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 import { motion } from "framer-motion";
 
@@ -46,6 +46,15 @@ const Footer = () => {
           >
             <FaInstagram size={28} strokeWidth={1.8} color="white" />
           </a>
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white transition-all duration-300 hover:scale-125 hover:opacity-90"
+          >
+            <FaLinkedin size={28} strokeWidth={1.8} color="white" />
+          </a>
         </div>
 
         {/* Copyright */}
@@ -53,8 +62,12 @@ const Footer = () => {
           © {new Date().getFullYear()} Olinga Njoya Jean Pascal — Tous droits réservés.
         </p>
 
+    <div className="mt-6 font-coco font-extrabold">
+          <span> Nos Collaborations</span>
+        </div>
          {/* LOGOS DÉROULANTS */}
       <div className="mt-2 overflow-hidden py-2 bg-white">
+        
         <motion.div
           className="flex gap-12 w-max"
           animate={{ x: ["0%", "-50%"] }}

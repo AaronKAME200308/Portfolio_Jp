@@ -12,9 +12,12 @@ export interface ProjectCardProps extends ProjectProps {
 }
 
 
-const HexagonCard = ({ image, title,category, description, tags,onSelect }: ProjectCardProps) => {
+const HexagonCard = ({ image, title, category, description, tags, onSelect }: ProjectCardProps) => {
   return (
-    <div className="hex group">
+    <div
+      onClick={() => onSelect(category)}
+      className="hex group cursor-pointer"
+    >
       <div
         className="hex-inner"
         style={{ backgroundImage: `url(${image})` }}
@@ -51,7 +54,7 @@ const HexagonCard = ({ image, title,category, description, tags,onSelect }: Proj
 
           {/* BOUTON ROND */}
           <span
-          onClick={() => onSelect(category)} 
+            onClick={() => onSelect(category)}
             className="
               cursor-pointer
               mt-4
@@ -67,7 +70,7 @@ const HexagonCard = ({ image, title,category, description, tags,onSelect }: Proj
               hover:scale-110
             "
           >
-            <ArrowRight  size={24} strokeWidth={3}/>
+            <ArrowRight size={24} strokeWidth={3} />
           </span>
 
         </div>

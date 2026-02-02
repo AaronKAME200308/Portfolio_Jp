@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   const linkClass = (id: string) =>
-    `px-3 py-2 rounded-md transition-all ${active === id
+    `font-coco font-extrabold px-3 py-2 rounded-md transition-all ${active === id
       ? "bg-white/10 text-white shadow-sm hover:text-white"
       : "text-[#f2cc6a] hover:text-white "
     }`;
@@ -54,11 +54,11 @@ const Navbar = () => {
           initial={{ scale: 0.98, opacity: 0.9 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.35 }}
-          className="text-2xl font-extrabold tracking-wide bg-clip-text text-transparent bg-[#f2cc6a]"
+          className="text-2xl font-coco font-extrabold tracking-wide bg-clip-text text-transparent bg-[#f2cc6a]"
         >
           JP
-          <span className="text-sm ml-2 font-medium text-white/70">
-            Graphics Design
+          <span className="font-coco font-extralight text-sm ml-2 text-white/70">
+            Graphic Design
           </span>
         </motion.p>
 
@@ -81,7 +81,7 @@ const Navbar = () => {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white bg-gradient-to-r from-[#f2cc6a] to-white/80 p-2 rounded-md"
+          className="md:hidden text-white bg-linear-to-r from-[#f2cc6a] to-white/80 p-2 rounded-md"
         >
           <span className="text-2xl">{open ? "✕" : "☰"}</span>
         </button>

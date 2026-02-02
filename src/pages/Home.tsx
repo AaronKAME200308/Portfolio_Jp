@@ -39,12 +39,12 @@ const Home = () => {
             }} 
             className="block p-1 bg-linear-to-r from-[#f2cc6a] to-white/90"
             >
-              <p className="font-coco font-extrabold text-black/90"> JP GRAPHIC DESIGNER</p>
+              <p className="font-coco font-extrabold text-black/90"> JP GRAPHIC DESIGN</p>
             </span>
           </h2>
 
           {/* TEXTE */}
-          <p className="font-coco font-extralight italic mt-5 text-lg text-white/85 mb-8">
+          <p className="font-coco font-extralight italic mt-5 text-lg text-white/85 mb-1">
             Créateur d'identité visuel - Designer
           </p>
 
@@ -71,7 +71,7 @@ const Home = () => {
             <motion.img
               src="/jp-full.png"
               alt="Portrait"
-              className="relative w-100 h-100 object-contain rounded-full"
+              className="relative w-150 h-150 object-contain rounded-full"
             />
           </div>
 
@@ -81,7 +81,7 @@ const Home = () => {
             <button onClick={() => scrollToSection("Projets")}>
               <motion.div
                 whileHover={buttonHover}
-                className="px-6 py-3 rounded-full bg-linear-to-r from-[#f2cc6a] to-white/90 font-semibold text-white shadow-lg"
+                className="font-coco font-extrabold px-6 py-3 rounded-full bg-linear-to-r from-[#f2cc6a] to-white/90 text-black/60 shadow-lg"
               >
                 Voir mes projets
               </motion.div>
@@ -90,7 +90,7 @@ const Home = () => {
             <button onClick={() => scrollToSection("Contact")}>
               <motion.div
                 whileHover={buttonHover}
-                className="px-6 py-3 rounded-full border border-white/30 text-white/85"
+                className="font-coco font-extrabold px-6 py-3 rounded-full border border-white/30 text-white/85"
               >
                 Me contacter
               </motion.div>

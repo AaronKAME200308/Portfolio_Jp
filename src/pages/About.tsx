@@ -3,12 +3,12 @@ import CircularProgress from "../component/CircleProgress";
 import { Sparkle } from "lucide-react";
 
 const logos = [
-  { Icon: "/brand-microsoft-powerpoint-svgrepo-com.svg", percent: 70, name: "PowerPoint"},
-  { Icon: "/canva-svgrepo-com.svg", percent: 90, name: "Canva"},
-  { Icon: "/capcut-svgrepo-com.svg", percent: 85, name: "Capcut"},
-  { Icon: "/illustrator-svgrepo-com.svg", percent: 80, name:"Illustrator" },
-  { Icon: "/indesign-svgrepo-com.svg", percent: 75, name: "Indesign"},
-  { Icon: "/photoshop-svgrepo-com.svg", percent: 88, name:"Photoshop" },
+  { Icon: "/photoshop-svgrepo-com.svg", percent: 100, name:"Photoshop" },  
+  { Icon: "/canva-svgrepo-com.svg", percent: 100, name: "Canva"},
+  { Icon: "/illustrator-svgrepo-com.svg", percent: 99, name:"Illustrator" },
+  { Icon: "/indesign-svgrepo-com.svg", percent: 98, name: "Indesign"},
+  { Icon: "/capcut-svgrepo-com.svg", percent: 90, name: "Capcut"},
+  { Icon: "/brand-microsoft-powerpoint-svgrepo-com.svg", percent: 96, name: "PowerPoint"},  
 ];
 
 const About = () => {
@@ -22,7 +22,7 @@ const About = () => {
       >
         <div className="flex items-center gap-2">
           <Sparkle className="w-5 h-5 text-[#f2cc6a]/90" />
-          <span>Compétences</span>
+          <span className="font-coco font-extrabold">Compétences</span>
         </div>
       </motion.div>
 

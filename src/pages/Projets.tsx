@@ -8,12 +8,12 @@ import { PanelsTopLeft } from "lucide-react";
 const filters = [
   "All",
   "Branding",
-  "Affiche Concert",
+  "Concert",
+  "Affiche",
   "Identité visuel",
   "Miniature",
-  "Retouche Photo",
-  "Packaging",
-  "Campagne Aadémique",
+  "Retouche Photo",  
+  "Campagne Académique",
   "Dépliant Professionnel",
   "Présentation"
 ];
@@ -28,15 +28,22 @@ const projects = {
       tags: ["Visuals", "Social media"],
     },
     {
-      title: "Affiche Concert",
-      category: "Affiche Concert",
-      image: "/face1.jpeg",
+      title: "Affiche",
+      category: "Affiche",
+      image: "/face.jpeg",
       description: "",
-      tags: ["Menu", "Print", "Social media"],
+      tags: ["Logo", "Product visuals", "E-commerce"],
     },
     {
-      title: "Identité Visuelle",
-      category: "IDV",
+      title: "Concert",
+      category: "Concert",
+      image: "/face1.jpeg",
+      description: "",
+      tags: ["Show", "After", "Social media"],
+    },
+    {
+      title: "Identité visuel",
+      category: "Identité visuel",
       image: "/face6.jpeg",
       description: "",
       tags: ["Logo", "Product visuals", "E-commerce"],
@@ -46,43 +53,36 @@ const projects = {
       category: "Miniature",
       image: "/face4.jpeg",
       description: "",
-      tags: ["Logo", "Visuals", "Social media"],
-    },
+      tags: ["Youtube", "Visuals", "Social media"],
+    }
+  ],
+  second: [
     {
       title: "Retouche Photo",
       category: "Retouche Photo",
       image: "/face3.jpeg",
       description: "",
-      tags: ["Logo", "Visuals", "Social media"],
-    },
-  ],
-  second: [
-    {
-      title: "Packaging",
-      category: "Packaging",
-      image: "",
-      description: "",
-      tags: ["Logo", "Product visuals", "E-commerce"],
+      tags: ["Visuals", "Social media"],
     },
     {
-      title: "Campagne Aadémique",
-      category: "Campagne Aadémique",
+      title: "Campagne Académique",
+      category: "Campagne Académique",
       image: "/face2.jpeg",
       description: "",
-      tags: ["Logo", "Product visuals", "E-commerce"],
+      tags: ["Sortie Scolaire", "Evènement", "Communiqué"],
     },
     {
       title: "Dépliant Professionnel",
       category: "Dépliant Professionnel",
       image: "/face5.jpeg",
       description: "",
-      tags: ["Logo", "Product visuals", "E-commerce"],
+      tags: ["Entreprise", "Particulier", "E-commerce"],
     }, {
       title: "Présentation",
       category: "Présentation",
       image: "",
       description: "",
-      tags: ["Logo", "Product visuals", "E-commerce"],
+      tags: ["Projet", "Soutenance", "Exposé"],
     },
   ],
 };
@@ -99,14 +99,17 @@ const Projects = () => {
   return (
     <main className="max-w-7xl mx-auto px-6 py-20">
       {/* TITRE */}
+      <div className="flex items-center-safe bg-linear-to-t from-black to-transparent">
+
+      </div>
       <motion.div
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="mx-auto mb-12 w-fit px-3 py-2 border border-[#f2cc6a]/60 rounded-full text-2xl font-bold text-center bg-linear-to-r from-black via-black/80 to-black/60"
+        className="mx-auto mb-12 w-fit px-3 py-2 border-2 border-[#f2cc6a]  rounded-full text-2xl font-bold text-center bg-linear-to-r from-black via-black/80 to-black/60"
       >
         <div className="flex items-center gap-2">
-          <PanelsTopLeft className="w-5 h-5 text-[#f2cc6a]/90" />
-          <span>Projets</span>
+          <PanelsTopLeft className="w-5 h-5 text-[#f2cc6a]" />
+          <span className="font-coco font-extrabold">Projets</span>
         </div>
       </motion.div>
       {/* FILTERS */}

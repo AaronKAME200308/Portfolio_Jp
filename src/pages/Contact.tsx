@@ -37,11 +37,11 @@ export default function Contact() {
       <motion.div
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="mx-auto mb-12 w-fit px-3 py-2 border border-[#f2cc6a]/60 rounded-full text-2xl font-bold text-center bg-linear-to-r from-black via-black/80 to-black/60"
+        className="mx-auto mb-12 w-fit px-3 py-2 border-2 border-[#f2cc6a] rounded-full text-2xl font-bold text-center bg-linear-to-r from-black via-black/80 to-black/60"
       >
-        <div className="flex items-center gap-2">
-          <Globe className="w-5 h-5 text-[#f2cc6a]/90" />
-          <span>Contact</span>
+        <div className="flex items-center gap-2 ">
+          <Globe className="w-5 h-5 text-[#f2cc6a]" />
+          <span className='font-coco font-extrabold '>Contact</span>
         </div>
       </motion.div>
       <motion.p
@@ -59,31 +59,31 @@ export default function Contact() {
         <motion.form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="bg-white/5 p-6 rounded-2xl border border-white/20 shadow-md space-y-2"
+          className="bg-white/5 p-6 rounded-2xl border-2 border-[#f2cc6a] shadow-md space-y-2"
         >
           <input
             required
             name="name"
             placeholder="Ton nom"
-            className="w-full p-3 rounded-md bg-transparent border border-white/40 outline-none"
+            className="w-full p-3 rounded-md bg-transparent border border-[#f2cc6a] outline-none"
           />
           <input
             required
             type="email"
             name="email"
             placeholder="Ton email"
-            className="w-full p-3 rounded-md bg-transparent border border-white/40 outline-none"
+            className="w-full p-3 rounded-md bg-transparent border border-[#f2cc6a] outline-none"
           />
           <textarea
             required
             name="message"
             rows={6}
             placeholder="Ton message"
-            className="w-full p-3 rounded-md bg-transparent border border-white/40 outline-none"
+            className="w-full p-3 rounded-md bg-transparent border border-[#f2cc6a] outline-none"
           />
           <button
             type="submit"
-            className="w-full sm:w-auto px-6 py-3 rounded-md bg-linear-to-r from-[#f2cc6a] via-[#f2cc6a] to-white/90 font-medium shadow hover:scale-105 transition"
+            className="w-full sm:w-auto px-6 py-3 rounded-md border border-[#f2cc6a] text-black/60 bg-linear-to-r from-[#f2cc6a] via-[#f2cc6a] to-white/90 font-medium shadow hover:scale-105 transition"
           >
             {loading ? "Envoi..." : "Envoyer"}
 
@@ -103,7 +103,7 @@ export default function Contact() {
 
         {/* Section SVG + contact */}
         <div
-          className="w-full bg-no-repeat bg-center bg-cover rounded-2xl relative h-80 sm:h-auto"
+          className="w-full  border-2 border-[#f2cc6a] bg-no-repeat bg-center bg-cover rounded-2xl relative h-80 sm:h-auto"
           style={{ backgroundImage: `url('/aigle2.svg')` }}
         >
           <div className="absolute bottom-4 right-4 flex flex-col space-y-4 text-white/70">
