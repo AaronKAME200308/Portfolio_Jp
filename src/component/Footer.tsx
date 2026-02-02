@@ -69,7 +69,7 @@ const Footer = () => {
       <div className="mt-2 overflow-hidden py-2 bg-white">
         
         <motion.div
-          className="flex gap-12 w-max"
+          className="flex gap-11 w-max"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             repeat: Infinity,
